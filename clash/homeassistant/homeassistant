@@ -1,0 +1,49 @@
+UUID=01643425-afab-46e4-a719-74fc9b3688ec /mnt/disk/docker ext4 defaults 0 0
+--------------------------------------------------------
+#homeassistant
+sudo mkdir -p /mnt/disk/docker/ha
+sudo nano compose.yaml
+---------------------------------------------------------
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      - /mnt/disk/docker/ha:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: bridge/host
+---------------------------------------------------------------
+services:
+ qinglong
+    container_name:qinglong
+    image: whyour/qinglong:latest # 基于 Debian 的版本：whyour/qinglong:debian  
+    volumes:
+      - /mnt/disk/docker/ql/data:/ql/data
+    ports:
+      - "5700:5700"
+    environment:
+      QlBaseUrl: '/' # 部署路径非必须，以斜杠开头和结尾，比如 /test/
+    restart: unless-stopped
+--------------------------------------------------------------
+#维护
+cd /mnt/disk/docker/project1
+sudo docker compose up -d #启动docker
+sudo docker compose down #停止docker
+sudo docker-compose pull #拉取最新镜像
+-------------------------------------------------------------
+zEpY9GWapkjMI_eem5esC9mN7awyQRvUhDc8HaRx
+---------------------------------------------------------------
+HAOS#
+建议使用冬瓜 HAOS  http://hasshome.net/，直接使用 PE 版本的 ISO，一键安装。
+
+还没时间仔细研究，一些插件：
+
+米家 - Xiaomi MIoT
+美的美居 - Midea AC LAN
+海尔智家 - haier  https://github.com/banto6/haier
+格力 - Gree Climate  https://www.home-assistant.io/integrations/gree/
+石头 - homeassistant-roborock  https://github.com/humbertogontijo/homeassistant-roborock
+---------------------------------------------------------------------
