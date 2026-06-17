@@ -1,0 +1,35 @@
+刷armbian到emmc：
+安装用armbian-install
+
+设置：
+https://bflome.com/archives/n1
+
+一滴也没有了——榨干老矿渣N1盒子
+
+https://www.jianshu.com/p/a0afcd549a47?v=1710491529137
+https://www.youtube.com/watch?v=wEvjMdalJDw
+
+N1盒子刷Armbian，看这一篇就够了——Armbian全方位安装指导书
+https://post.smzdm.com/p/alpwnxmp/
+
+N1 盒子刷最新版 armbian 及软件安装
+https://post.smzdm.com/p/a25gpgx7/
+
+
+armbian安装docker
+
+https://zhuanlan.zhihu.com/p/651502622
+https://blog.51cto.com/u_16213444/11244963
+
+
+dockerhub：https://macintel.filegear-sg.me/
+
+docker pull pull.loridocker.com/mybtjson/fastapi-4gtv:1.0.1
+docker pull macintel.filegear-sg.me/portainer/portainer-ce
+docker pull macintel.filegear-sg.me/whyour/qinglong
+docker pull macintel.filegear-sg.me/ghcr.io/outlovecn/portainer-cn:main
+docker pull whyour/qinglong
+docker pull whyour/qinglong:2.11.3
+portainer
+admin/passwordadmin
+
