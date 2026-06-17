@@ -1,0 +1,9 @@
+services:
+  qinglong:
+    container_name: qinglong
+    image: whyour/qinglong:latest
+    volumes:
+      - /mnt/disk/docker/ql/data:/ql/data
+    ports:
+      - "5700:5700"
+    restart: unless-stopped
