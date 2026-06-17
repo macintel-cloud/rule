@@ -1,0 +1,46 @@
+1.home-assistant的docker镜像获取
+docker pull home-assistant/home-assistant
+
+2.home-assistant的docker容器创建
+mkdir -p /etc/docker/homeassistant
+
+docker run -d \
+  --name homeassistant \
+  --privileged \
+  --restart=unless-stopped \
+  -e TZ=Asia/Shanghai \
+  -v /etc/docker/homeassistant:/config \
+  -v /run/dbus:/run/dbus:ro \
+  --network=host \
+  ghcr.io/home-assistant/home-assistant:stable
+  
+3.HACS安装包
+
+https://wangjingge.lanzouq.com/iiIIq130sv6f
+
+Home Assistant官网：
+https://www.home-assistant.io/installation/linux
+
+小米官方集成：
+https://github.com/XiaoMi/ha_xiaomi_home
+
+视频教程：
+https://www.youtube.com/watch?v=cQYQkfhERvE
+
+
+HACS (Home Assistant Community Store)：
+https://github.com/hacs/integration
+
+Haier
+https://github.com/banto6/haier
+
+
+官网：will/4M5h7MqRYJMG7qn
+
+clientId：Windows11x641744084627773
+refreshToken：41a04571113b4a1fac57ccd6f559688e
+
+------------------------------
+macintel
+macintel@proton.me
+will/4M5h7MqRYJMG7qn#
